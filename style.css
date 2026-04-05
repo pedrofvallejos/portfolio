@@ -1,0 +1,254 @@
+/* --- ESTILO 8-BIT RETRO --- */
+
+/* 1. Importamos una fuente pixelada de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    /* Paleta de colores retro (inspirada en la NES/GameBoy) */
+    --color-bg: #202020; /* Fondo casi negro, como monitor viejo */
+    --color-text: #e0e0e0; /* Texto gris claro, no blanco puro */
+    --color-accent: #fcd23c; /* Amarillo "Moneda de Mario" */
+    --color-secondary: #ff3333; /* Rojo vibrante */
+    --color-section-bg: #2a2a2a; /* Fondo de sección ligeramente más claro */
+    --color-shadow: rgba(0, 0, 0, 0.7);
+    
+    /* Fuente pixelada principal */
+    --font-pixel: 'Press Start 2P', cursive;
+}
+
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    /* Efecto de renderizado para forzar bordes nítidos en píxeles */
+    image-rendering: pixelated; 
+}
+
+body {
+    font-family: var(--font-pixel);
+    /* Las fuentes pixeladas suelen ser grandes, bajamos el tamaño base */
+    font-size: 12px; 
+    line-height: 1.8;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    margin: 0;
+    padding: 0;
+    /* Un ligero patrón de líneas de escaneo (opcional) */
+    background-image: linear-gradient(0deg, transparent 50%, rgba(0,0,0,0.1) 50%);
+    background-size: 100% 4px;
+}
+
+/* Efecto parpadeo CRT para títulos (opcional pero muy retro) */
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+header {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: transparent; /* Quitamos el fondo sólido */
+    border-bottom: 4px dashed var(--color-accent);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem; /* Más grande para el título */
+    color: var(--color-accent);
+    text-transform: uppercase;
+    text-shadow: 4px 4px 0px var(--color-shadow);
+    letter-spacing: 2px;
+    animation: flicker 0.15s infinite alternate;
+}
+
+header p {
+    margin: 1.5rem 0 0;
+    font-size: 10px;
+    color: var(--color-text);
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.container {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background-color: var(--color-section-bg);
+    margin-bottom: 3rem;
+    padding: 2rem;
+    /* Bordes pixelados: Usamos box-shadow para simular grosor nítido */
+    box-shadow: 
+        0 4px 0 0 var(--color-shadow),
+        0 -4px 0 0 var(--color-shadow),
+        4px 0 0 0 var(--color-shadow),
+        -4px 0 0 0 var(--color-shadow);
+    border: none;
+}
+
+h2 {
+    color: var(--color-secondary);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    /* Subrayado pixelado */
+    border-bottom: 4px solid var(--color-secondary);
+    display: inline-block;
+}
+
+.project {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px dashed #444;
+}
+
+.project:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.project h3 {
+    margin-top: 0;
+    color: var(--color-accent);
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.project p {
+    font-size: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.tags {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-top: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.tag {
+    background-color: #333;
+    color: var(--color-accent);
+    padding: 0.5rem 0.8rem;
+    font-size: 8px;
+    text-transform: uppercase;
+    /* Borde pixelado individual */
+    box-shadow: 
+        0 2px 0 0 var(--color-shadow),
+        0 -2px 0 0 var(--color-shadow),
+        2px 0 0 0 var(--color-shadow),
+        -2px 0 0 0 var(--color-shadow);
+}
+
+/* Botones estilo "Press Start" */
+a.btn {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
+    background-color: var(--color-secondary);
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    text-transform: uppercase;
+    /* Efecto 3D pixelado (borde inferior más grueso) */
+    box-shadow: 
+        0 4px 0 0 #990000, 
+        0 -2px 0 0 var(--color-shadow),
+        2px 0 0 0 var(--color-shadow),
+        -2px 0 0 0 var(--color-shadow);
+    transition: none; /* Los 8 bits no tienen transiciones suaves */
+}
+
+a.btn:hover {
+    background-color: #ff5555;
+    /* Simula que se hunde al presionarlo */
+    transform: translateY(2px);
+    box-shadow: 
+        0 2px 0 0 #990000, 
+        0 -1px 0 0 var(--color-shadow),
+        1px 0 0 0 var(--color-shadow),
+        -1px 0 0 0 var(--color-shadow);
+}
+
+.link-contacto {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.link-contacto:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 3rem;
+    color: #666;
+    font-size: 8px;
+    text-transform: uppercase;
+    border-top: 4px dashed #444;
+}
+
+/* --- AJUSTES RESPONSIVE (PARA CELULARES) --- */
+
+@media (max-width: 600px) {
+    body {
+        /* Subimos un poquito el tamaño base para que la fuente pixelada no sea ilegible */
+        font-size: 10px; 
+    }
+
+    header {
+        padding: 2.5rem 1rem;
+    }
+
+    header h1 {
+        /* Achicamos el título para que no se corte en pantallas angostas */
+        font-size: 1.4rem; 
+    }
+
+    header p {
+        font-size: 8px;
+        margin-top: 1rem;
+    }
+
+    .container {
+        margin: 1.5rem auto;
+        padding: 0 0.8rem;
+    }
+
+    section {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .project h3 {
+        font-size: 0.9rem;
+    }
+
+    /* Hacemos que las etiquetas y botones ocupen el ancho completo o se acomoden mejor */
+    .tags {
+        gap: 0.5rem;
+    }
+
+    .tag {
+        font-size: 7px;
+        padding: 0.4rem 0.6rem;
+    }
+
+    a.btn {
+        display: block; /* Ocupa todo el ancho disponible */
+        text-align: center;
+        font-size: 9px;
+        padding: 1rem;
+    }
+}
