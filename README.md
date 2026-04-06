@@ -32,8 +32,7 @@ Adentro de la página vas a poder encontrar mis trabajos, entre los cuales desta
 ## 📂 Cómo ver el Proyecto
 Podes clonar este repositorio y abrir el archivo `index.html` en tu navegador, o simplemente visitar la versión publicada en la web:
 
-👉 **[Hacé clic acá para ver mi Portfolio en vivo](TU_LINK_DE_GITHUB_PAGES_ACA)**
-
+👉 **[Hacé clic acá para ver mi Portfolio en vivo](https://pedrofvallejos.github.io/portfolio/)
 ---
 
 ## ✉️ Contacto
