@@ -7,38 +7,80 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="nav-container">
+        <button id="menu-toggle" class="pixel-menu-btn">☰ MENU</button>
+        
+        <nav id="pixel-nav" class="pixel-nav-hidden">
+            <ul>
+                <li><a href="#sobre-mi" class="nav-link"> 1. STATUS </a></li>
+                <li><a href="#proyectos" class="nav-link"> 2. QUESTS </a></li>
+                <li><a href="#habilidades" class="nav-link"> 3. SKILLS </a></li>
+                <li><a href="#contacto" class="nav-link"> 4. SAVE & EXIT </a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="pixel-rocket-container">
+        <div class="pixel-rocket-art"></div>
+    </div>
 
     <header>
         <h1>Pedro Francisco Vallejos</h1>
-        <p>Software Developer | Hardware & Electronics Tech</p>
+        <p id="subtitulo">Desarrollador de Software / Técnico en Hardware y Electrónica</p>
     </header>
 
     <div class="container">
 
+        
         <section id="sobre-mi">
-            <h2>[ Status ]</h2>
-            <p>
-                Hola, soy un apasionado por la tecnología con un perfil que combina el desarrollo de software con la electrónica práctica. Me encanta resolver problemas lógicos y complejos, ya sea optimizando código en Python y C, o diagnosticando y reparando circuitos de hardware. Busco aportar soluciones eficientes y lógicas en proyectos de desarrollo.
-            </p>
+            <h2 class="maquina-escribir">[ STATUS ]</h2>
+            
+            <div id="typewriter-text" class="retro-text-box maquina-escribir">
+               Hola, soy Pedro Vallejos. Técnico abocado en Hardware y Desarrollador Trainee enfocado en Python y C, tambien poseo 
+               conocimientos básicos en Java, Javascript, HTML, CSS y C++. 
+                Actualmente soy estudiante de la carrera de Desarrollo de Software en la Universidad Provincial de Ezeiza (UPE). 
+                Me apasiona revivir equipos y programar soluciones que conecten el mundo físico con el digital. 
+                Mi enfoque combina la precisión de la micro-soldadura con la lógica del código. 
+                Explorá mis quests (proyectos) para ver de qué soy capaz.
+            </div>
         </section>
 
-        <section id="proyectos">
-             <h2>[ Quests Completadas ]</h2>
-            
-            <div class="project">
-                <h3>Sistema de Gestión de Stock</h3>
-                <p>Desarrollé un sistema completo de control de inventario para optimizar la administración de productos y repuestos. El software permite registrar ingresos, egresos y generar reportes. Fue compilado como un ejecutable independiente (.exe) usando PyInstaller para facilitar su instalación sin dependencias externas.</p>
-                <div class="tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">PyInstaller</span>
-                    <span class="tag">Bases de Datos</span>
-                </div>
-               <a href="https://github.com/pedrofvallejos" class="btn" target="_blank">Ver Código en GitHub</a>
-            </div>
+       
+             
+           <section id="QUESTS"> 
+                <h2>[ QUESTS ]</h2>             
+                <div class="project">
+                    <h3 class="maquina-escribir">Sistema de Gestión de Cobros</h3>
+                    <p class="maquina-escribir">
+                        Desarrollé un sistema completo para el control y registro de cobros a clientes, optimizando la administración de cuentas y deudas.
+                        El software permite llevar un seguimiento detallado de los pagos y generar reportes claros. 
+                        Fue compilado como un ejecutable independiente (.exe) usando PyInstaller para facilitar su uso directo sin dependencias externas.
+                    </p>
+                    
+                    <div class="project-details" style="margin-top: 1rem;">
+                        <p style="color: var(--color-secondary); margin-bottom: 0.5rem; font-family: monospace;">[ CARACTERÍSTICAS DEL SOFTWARE ]</p>
+                        <ul style="list-style-type: '-> '; padding-left: 1.5rem; margin-bottom: 1rem; color: #fff; font-family: monospace;">
+                            <li>Registro y actualización de bases de datos de clientes y deudas.</li>
+                            <li>Cálculo automatizado de saldos pendientes y pagos parciales.</li>
+                            <li>Generación de reportes limpios para el control de caja.</li>
+                            <li>Interfaz optimizada para un uso rápido y sin complicaciones en el taller.</li>
+                        </ul>
+                    </div>
 
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">PyInstaller</span>
+                        <span class="tag">Bases de Datos</span>
+                    </div>
+                    
+                    <div style="margin-top: 1.5rem;">
+                        <a href="https://github.com/pedrofvallejos/sistema-de-cobro" class="btn" target="_blank">Ver Código en GitHub</a>
+                    </div>
+                </div>
             <div class="project">
-                <h3>Modificación y Reparación de Hardware</h3>
-                <p>Aplicación de conocimientos en electrónica digital y micro-soldadura para el diagnóstico, reparación y modificación de placas de circuitos. Experiencia en el reacondicionamiento de dispositivos y optimización de sistemas de alimentación.</p>
+                <h3 class="maquina-escribir">Modificación y Reparación de Hardware</h3>
+                <p class="maquina-escribir">Aplicación de conocimientos en electrónica digital y micro-soldadura para el diagnóstico, 
+                    reparación y modificación de placas de circuitos. Experiencia en el reacondicionamiento de dispositivos
+                     y optimización de sistemas de alimentación.</p>
                 <div class="tags">
                     <span class="tag">Electrónica</span>
                     <span class="tag">Soldadura</span>
@@ -47,28 +89,73 @@
         </section>
 
         <section id="habilidades">
-            <h2>Habilidades Técnicas</h2>
-            <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">C / C++</span>
-                <span class="tag">C# (Unity)</span>
-                <span class="tag">Electrónica Digital</span>
-                <span class="tag">Soldadura y Micro-soldadura</span>
-                <span class="tag">Reparación de Hardware</span>
-                <span class="tag">Git & GitHub</span>
+            <h2 class="maquina-escribir">[ Stats de Personaje ]</h2>
+            
+            <div class="skill-container">
+                <p>Python</p>
+                <div class="bar-border"><div class="bar-fill" style="width: 70%;"></div></div>
+            </div>
+
+            <div class="skill-container">
+                <p class="maquina-escribir"v>C / C++</p>
+                <div class="bar-border"><div class="bar-fill" style="width: 60%;"></div></div>
+            </div>
+
+            <div class="skill-container">
+                <p class="maquina-escribir">Electrónica Digital</p>
+                <div class="bar-border"><div class="bar-fill" style="width: 70%;"></div></div>
+            </div>
+
+            <div class="skill-container">
+                <p class="maquina-escribir">Micro-Soldadura</p>
+                <div class="bar-border"><div class="bar-fill" style="width: 65%;"></div></div>
+            </div>
+            <div class="skill-container">
+                <p class="maquina-escribir">Testing</p>
+                <div class="bar-border"><div class="bar-fill" style="width: 50%;"></div></div>
+            </div>
+             <div class="skill-container">
+                <p class="maquina-escribir">Java</p>
+                <div class="bar-border"><div class="bar-fill" style="width: 30%;"></div></div>
+            </div>
+             <div class="skill-container">
+                <p class="maquina-escribir">Javascript</p>
+                <div class="bar-border"><div class="bar-fill" style="width: 50%;"></div></div>
+            </div>
+             <div class="skill-container">
+                <p class="maquina-escribir">HTML</p>
+                <div class="bar-border"><div class="bar-fill" style="width: 50%;"></div></div>
+            </div>
+             <div class="skill-container">
+                <p class="maquina-escribir">CSS</p>
+                <div class="bar-border"><div class="bar-fill" style="width: 50%;"></div></div>
             </div>
         </section>
-
         <section id="contacto">
-            <h2>Contacto</h2>
-            <p>¿Te interesa mi perfil? ¡Hablemos!</p>
-            <p>📧 <strong>Email:</strong> pedrovallejos0701@gmail.com</p>
+            <h2 class="maquina-escribir"v>Contacto</h2>
+            <p class="maquina-escribir">¿Te interesa mi perfil? ¡Hablemos!</p>
+            <p class="maquina-escribir"v>📧 <strong>Email:</strong> pedrovallejos0701@gmail.com</p>
           <p>💼 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pedro-vallejos-8654b72b2/" class="link-contacto" target="_blank">www.linkedin.com/in/pedro-vallejos-8654b72b2/</a></p>
         </section>
+        <div id="character-rope-v2" class="character-rope-container-v2">
+            <div class="pixel-rope-v2"></div>
+            <div class="pixel-character-art"></div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+            <button id="btn-explosion" class="btn-danger">[ AUTO-DESTRUCCIÓN ]</button>
+        </div>
 
     </div>
     
+    
     <footer>
+        </section>
+
+       
+
+    </div> 
+        <p>&copy; 2026 - Pedro Vallejos | Dev & Hardware Tech</p>
+    
         <p>&copy; 2026 - Diseñado y desarrollado a mano.</p>
     </footer>
 

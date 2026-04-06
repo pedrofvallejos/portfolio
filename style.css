@@ -48,19 +48,43 @@ header {
     text-align: center;
     padding: 4rem 1rem;
     background-color: transparent; /* Quitamos el fondo sólido */
-    border-bottom: 4px dashed var(--color-accent);
+   
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2rem; /* Más grande para el título */
-    color: var(--color-accent);
-    text-transform: uppercase;
-    text-shadow: 4px 4px 0px var(--color-shadow);
-    letter-spacing: 2px;
-    animation: flicker 0.15s infinite alternate;
+/* --- TÍTULO PRINCIPAL ESTILO 3D RETRO --- */
+h1 {
+    font-size: 3.5rem; /* Un poco más grande para que se note */
+    color: #fff; /* El color de la letra principal es blanco */
+    text-transform: uppercase; /* Todo en mayúsculas para un look más "arcadiano" */
+    letter-spacing: 2px; /* Separamos un poco las letras */
+    margin-bottom: 0.5rem;
+    
+    /* El truco del 3D: capas de sombras sólidas y pixeladas */
+   text-shadow: 
+        1px 1px 0 #000,
+        2px 2px 0 #000,
+        /* Capa Azul */
+        3px 3px 0 #00f,
+        4px 4px 0 #00f,
+        /* Capa Verde */
+        5px 5px 0 #0f0,
+        6px 6px 0 #0f0,
+        /* Capa Amarilla */
+        7px 7px 0 #ff0,
+        8px 8px 0 #ff0,
+        /* Capa Roja */
+        9px 9px 0 #f00,
+        10px 10px 0 #f00;
+        
+    /* Animación para que los colores se muevan levemente */
+    animation: coloresLocos 2s infinite linear;
 }
 
+/* Pequeño temblor retro para darle más vida */
+@keyframes coloresLocos {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(1px, 1px); }
+}
 header p {
     margin: 1.5rem 0 0;
     font-size: 10px;
@@ -89,15 +113,71 @@ section {
 }
 
 h2 {
-    color: var(--color-secondary);
+   
     font-size: 1.2rem;
-    text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    /* Subrayado pixelado */
-    border-bottom: 4px solid var(--color-secondary);
-    display: inline-block;
+     color: #fff; /* El color de la letra principal es blanco */
+    text-transform: uppercase; /* Todo en mayúsculas para un look más "arcadiano" */
+    letter-spacing: 2px; /* Separamos un poco las letras */
+    margin-bottom: 0.5rem;
+    
+    /* El truco del 3D: capas de sombras sólidas y pixeladas */
+   text-shadow: 
+        1px 1px 0 #000,
+        2px 2px 0 #000,
+        /* Capa Azul */
+        3px 3px 0 #00f,
+        4px 4px 0 #00f,
+        /* Capa Verde */
+        5px 5px 0 #0f0,
+        6px 6px 0 #0f0,
+        /* Capa Amarilla */
+        7px 7px 0 #ff0,
+        8px 8px 0 #ff0,
+        /* Capa Roja */
+        9px 9px 0 #f00,
+        10px 10px 0 #f00;
+        
+    /* Animación para que los colores se muevan levemente */
+    animation: coloresLocos 2s infinite linear;
+}
+
+/* Pequeño temblor retro para darle más vida */
+@keyframes coloresLocos {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(1px, 1px); }
+}
+#subtitulo{
+     font-size: 1rem;
+     color: #fff; /* El color de la letra principal es blanco */
+    text-transform: uppercase; /* Todo en mayúsculas para un look más "arcadiano" */
+    letter-spacing: 2px; /* Separamos un poco las letras */
+    margin-bottom: 0.5rem;
+    
+    /* El truco del 3D: capas de sombras sólidas y pixeladas */
+   text-shadow: 
+        1px 1px 0 #000,
+        2px 2px 0 #000,
+        /* Capa Azul */
+        3px 3px 0 #00f,
+        4px 4px 0 #00f,
+        /* Capa Verde */
+        5px 5px 0 #0f0,
+        6px 6px 0 #0f0,
+        /* Capa Amarilla */
+        7px 7px 0 #ff0,
+        8px 8px 0 #ff0,
+        /* Capa Roja */
+        9px 9px 0 #f00,
+        10px 10px 0 #f00;
+        
+    /* Animación para que los colores se muevan levemente */
+    animation: coloresLocos 2s infinite linear;
+}
+
+/* Pequeño temblor retro para darle más vida */
+@keyframes coloresLocos {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(1px, 1px); }
 }
 
 .project {
@@ -194,61 +274,392 @@ footer {
     border-top: 4px dashed #444;
 }
 
-/* --- AJUSTES RESPONSIVE (PARA CELULARES) --- */
+/* --- NUEVOS ESTILOS RETRO --- */
 
-@media (max-width: 600px) {
-    body {
-        /* Subimos un poquito el tamaño base para que la fuente pixelada no sea ilegible */
-        font-size: 10px; 
+/* Barras de habilidad */
+.skill-container {
+    margin-bottom: 1.5rem;
+}
+
+.skill-container p {
+    font-size: 10px;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.bar-border {
+    height: 20px;
+    background-color: #1a1a1a;
+    padding: 2px;
+    box-shadow: 
+        0 2px 0 0 var(--color-shadow),
+        0 -2px 0 0 var(--color-shadow),
+        2px 0 0 0 var(--color-shadow),
+        -2px 0 0 0 var(--color-shadow);
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: var(--color-accent);
+    /* Efecto pixelado de carga */
+    background-image: linear-gradient(90deg, rgba(0,0,0,0.1) 50%, transparent 50%);
+    background-size: 8px 100%;
+}
+
+/* Botón de peligro */
+.btn-danger {
+    font-family: var(--font-pixel);
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    background-color: #990000;
+    color: white;
+    font-size: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 
+        0 4px 0 0 #550000, 
+        0 -2px 0 0 var(--color-shadow),
+        2px 0 0 0 var(--color-shadow),
+        -2px 0 0 0 var(--color-shadow);
+}
+
+.btn-danger:hover {
+    background-color: #ff3333;
+    transform: translateY(2px);
+    box-shadow: 
+        0 2px 0 0 #550000, 
+        0 -1px 0 0 var(--color-shadow),
+        1px 0 0 0 var(--color-shadow),
+        -1px 0 0 0 var(--color-shadow);
+}
+
+/* Efecto estática para la explosión */
+.static-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    background-image: linear-gradient(rgba(255,255,255,0.1) 50%, transparent 50%),
+                      linear-gradient(90deg, rgba(255,255,255,0.1) 50%, transparent 50%);
+    background-size: 4px 4px, 4px 4px;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #ff3333;
+}
+/* --- ESTILOS MENÚ HAMBURGUESA 8-BIT --- */
+.nav-container {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+}
+
+.pixel-menu-btn {
+    font-family: var(--font-pixel);
+    background-color: var(--color-secondary);
+    color: white;
+    border: none;
+    padding: 0.8rem 1rem;
+    font-size: 10px;
+    cursor: pointer;
+    box-shadow: 
+        0 4px 0 0 #990000, 
+        0 -2px 0 0 var(--color-shadow),
+        2px 0 0 0 var(--color-shadow),
+        -2px 0 0 0 var(--color-shadow);
+}
+
+.pixel-menu-btn:hover {
+    background-color: #ff5555;
+}
+
+#pixel-nav {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #1a1a1a;
+    padding: 1.5rem;
+    width: 200px;
+    box-shadow: 
+        0 4px 0 0 var(--color-shadow),
+        0 -4px 0 0 var(--color-shadow),
+        4px 0 0 0 var(--color-shadow),
+        -4px 0 0 0 var(--color-shadow);
+}
+
+/* Clases para mostrar/ocultar el menú */
+.pixel-nav-hidden {
+    display: none;
+}
+
+#pixel-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#pixel-nav ul li {
+    margin-bottom: 1.5rem;
+}
+
+#pixel-nav ul li:last-child {
+    margin-bottom: 0;
+}
+
+#pixel-nav ul li a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 10px;
+    display: block;
+    transition: color 0.1s;
+}
+
+#pixel-nav ul li a:hover {
+    color: var(--color-accent);
+}
+
+/* Suavizado de scroll para que no pegue el salto brusco */
+html {
+    scroll-behavior: smooth;
+}
+/* --- ANIMACIONES AVANZADAS DE 8-BIT --- */
+
+/* 🚀 EL COHETE DIAGONAL (Actualizado) */
+.pixel-rocket-container {
+    position: fixed;
+    /* Punto de partida: inferior izquierda, fuera de la pantalla */
+    bottom: -100px; 
+    left: -100px; 
+    width: 32px;
+    height: 32px;
+    z-index: 9999; /* Siempre arriba de todo */
+    opacity: 1;
+    /* Animación diagonal: se mueve, dura 15 segundos (un poco más lento), es lineal e infinita */
+    animation: volarDiagonalCss 15s linear infinite;
+}
+
+/* El dibujo del cohete se mantiene igual */
+.pixel-rocket-art {
+    width: 4px; /* Tamaño del píxel */
+    height: 4px;
+    background: transparent;
+    box-shadow:
+        /* Punta */
+        8px 0 #fff, 12px 0 #fff,
+        4px 4px #fff, 16px 4px #fff,
+        /* Cuerpo */
+        4px 8px #aaa, 8px 8px #fff, 12px 8px #fff, 16px 8px #aaa,
+        4px 12px #aaa, 8px 12px #fff, 12px 12px #fff, 16px 12px #aaa,
+        4px 16px #aaa, 8px 16px #333, 12px 16px #333, 16px 16px #aaa,
+        4px 20px #aaa, 8px 20px #fff, 12px 20px #fff, 16px 20px #aaa,
+        /* Aletas */
+        0 24px #900, 4px 24px #aaa, 8px 24px #fff, 12px 24px #fff, 16px 24px #aaa, 20px 24px #900,
+        0 28px #900, 20px 28px #900,
+        /* Fuego */
+        8px 32px #f90, 12px 32px #f90;
+}
+
+/* Definimos el despegue diagonal */
+@keyframes volarDiagonalCss {
+    0% { 
+        left: -100px; 
+        bottom: -100px; 
+    } /* Inicio: Abajo-Izquierda */
+    100% { 
+        left: 110%; 
+        bottom: 110%; 
+    } /* Fin: Arriba-Derecha (bien afuera) */
+}
+/* 🏃 EL TIPITO GRANDE EN CUERDA AMARILLA (Actualizado) */
+.character-rope-container-v2 {
+    position: fixed;
+    top: 0;
+    left: 40px; /* Un poco más separado para que entre el tipito grande */
+    height: 100vh;
+    z-index: 9998;
+    width: 60px; /* Más ancho para contener al tipito más grande */
+    pointer-events: none;
+}
+
+/* La Cuerda AMARILLA */
+.pixel-rope-v2 {
+    width: 6px; /* Cuerda un poco más gruesa */
+    height: 100%;
+    background-color: #ffd700; /* Oro/Amarillo vibrante */
+    margin: 0 auto;
+    /* Efecto de cuerda punteada retro amarillo/negro */
+    background-image: linear-gradient(#ffd700 50%, transparent 50%);
+    background-size: 100% 12px;
+}
+
+/* El Personaje GRANDE con COLORES NUEVOS (Actualizado) */
+.pixel-character-art {
+    position: absolute;
+    top: 0px; /* Manejado por JS */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px; /* Tamaño del píxel DOBLE */
+    height: 8px;
+    background: transparent;
+    box-shadow:
+        /* --- Mismo dibujo, colores actualizados (múltiplos de 8) --- */
+        
+        /* Cabeza NEGRA (#000) */
+        16px 0 #000, 24px 0 #000,
+        8px 8px #000, 32px 8px #000,
+        16px 16px #000, 24px 16px #000,
+        
+        /* Cuerpo - Remera ROJA (#d00) y detalles (#800 para sombra) */
+        16px 24px #d00, 24px 24px #d00,
+        8px 32px #d00, 16px 32px #800, 24px 32px #800, 32px 32px #d00,
+        16px 40px #d00, 24px 40px #d00,
+        
+        /* Piernas - Pantalones AZULES (#00d) */
+        8px 48px #00d, 32px 48px #00d,
+        8px 56px #00d, 32px 56px #00d;
+}
+/* --- EFECTOS ESPECIALES RETRO (ESTRELLAS + CRT) --- */
+
+/* 1. Fondo de Estrellas Pixeladas (se aplica al body) */
+body {
+    background-color: #000; /* Fondo negro base */
+    /* Creamos estrellas usando gradientes radiales pequeños */
+    background-image: 
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
+        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 3px);
+    /* Tamaños y posiciones de las capas de estrellas */
+    background-size: 550px 550px, 350px 350px, 250px 250px;
+    background-position: 0 0, 40px 60px, 130px 270px;
+    /* Para que las estrellas no se muevan al scrollear */
+    background-attachment: fixed; 
+}
+
+/* 2. Efecto Pantalla CRT (TV Vieja - Scanlines) */
+body::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* Líneas horizontales finas */
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+    background-size: 100% 4px;
+    z-index: 10000; /* Por encima de todo */
+    pointer-events: none; /* No interrumpe los clics */
+    opacity: 0.15; /* Sutil */
+}
+
+ /*3. Caja de texto para el efecto typewriter */
+.retro-text-box {
+    border: 2px solid var(--color-shadow);
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+       min-height: 200px;    /* Para que no salte al escribirse */
+     position: relative;
+    overflow: hidden;
+} 
+
+/* Cursor parpadeante */
+.retro-text-box::after {
+    content: "_";
+    animation: cursorParpadeo 1s infinite;
+    color: var(--color-accent);
+    font-weight: bold;
+}
+/* Fuerza bruta para evitar que los textos se vayan al costado */
+.texto-pixel-wrap, .retro-text-box, .maquina-escribir {
+    white-space: normal !important;      /* Permite saltos de línea normales */
+    word-break: break-word !important;   /* Corta la palabra si es demasiado larga */
+    overflow-wrap: break-word !important;/* Estándar moderno para cortar palabras */
+    max-width: 100% !important;          /* No puede medir más que su contenedor */
+    display: inline-block;               /* Ayuda al navegador a calcular el ancho */
+}
+
+/* Y para la caja de texto del Status por las dudas */
+.retro-text-box {
+    width: 100% !important;
+    box-sizing: border-box !important;   /* Asegura que el padding no la ensanche */
+}
+@keyframes cursorParpadeo {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+    /* --- TAMAÑO DE TEXTOS GENERALES (Para PC) --- */
+p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+}
+
+li {
+    font-size: 16px !important;
+    margin-bottom: 8px;
+}
+
+/* =======================================================
+   📱/📟 REGLAS PARA CELULARES Y TABLETS (Hasta 1024px)
+   ======================================================= */
+@media (max-width: 768px) {
+    
+    /* 1. OCULTAMOS EL TIPITO DE LA SOGA EN TABLETS Y CELUS */
+    .character-rope-container-v2 {
+        display: none !important;
     }
-
-    header {
-        padding: 2.5rem 1rem;
-    }
-
+    
+    /* 2. Achicamos textos para que no rompan la pantalla */
     header h1 {
-        /* Achicamos el título para que no se corte en pantallas angostas */
-        font-size: 1.4rem; 
+        font-size: 1.4rem !important; 
     }
 
     header p {
-        font-size: 8px;
-        margin-top: 1rem;
+        font-size: 8px !important;
+        margin-top: 1rem !important;
     }
 
     .container {
-        margin: 1.5rem auto;
-        padding: 0 0.8rem;
+        margin: 1.5rem auto !important;
+        padding: 0 0.8rem !important;
     }
 
     section {
-        padding: 1.5rem;
-        margin-bottom: 2rem;
+        padding: 1.5rem !important;
+        margin-bottom: 2rem !important;
     }
 
     h2 {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
+        font-size: 1rem !important;
+        margin-bottom: 1.5rem !important;
     }
 
     .project h3 {
-        font-size: 0.9rem;
+        font-size: 0.9rem !important;
     }
 
-    /* Hacemos que las etiquetas y botones ocupen el ancho completo o se acomoden mejor */
+    p, li {
+        font-size: 12px !important; /* Texto un toque más chico en pantallas medianas/chicas */
+    }
+
+    /* 3. Acomodamos botones y etiquetas */
     .tags {
-        gap: 0.5rem;
+        gap: 0.5rem !important;
     }
 
     .tag {
-        font-size: 7px;
-        padding: 0.4rem 0.6rem;
+        font-size: 7px !important;
+        padding: 0.4rem 0.6rem !important;
     }
 
     a.btn {
-        display: block; /* Ocupa todo el ancho disponible */
-        text-align: center;
-        font-size: 9px;
-        padding: 1rem;
+        display: block !important; /* Ocupa todo el ancho */
+        text-align: center !important;
+        font-size: 9px !important;
+        padding: 1rem !important;
     }
 }
